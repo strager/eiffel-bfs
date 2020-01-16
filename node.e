@@ -7,12 +7,12 @@ note
 class NODE
 create make
 feature
-	children: ARRAY[NODE]
+	children: ARRAYED_LIST[NODE]
 	data: INTEGER
 
 	make (d: INTEGER)
 		do
 			data := d
-			create children.make_empty
+			create children.make(0)
 		end
 end
